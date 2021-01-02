@@ -16,3 +16,8 @@
   display: flex;
   justify-content: center;
 }
+
+.fixedWidth {
+  max-width: 75rem;
+  margin: 0 auto;
+}

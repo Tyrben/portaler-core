@@ -4,6 +4,7 @@ import React, { FC } from 'react'
 
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/core/styles'
+import cn from 'clsx'
 
 import Footer from '../Footer'
 import Header from '../Header'
@@ -11,11 +12,22 @@ import Header from '../Header'
 import styles from './styles.module.scss'
 import theme from './theme'
 
-const Layout: FC = ({ children }) => (
+interface LayoutProps {
+  fixedWidth?: boolean
+  className?: string
+}
+
+const Layout: FC<LayoutProps> = ({
+  children,
+  fixedWidth = false,
+  className = '',
+}) => (
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <Header />
-    <div className={styles.baseContainer}>{children}</div>
+    <div className={cn(styles.baseContainer, className)}>
+      <div className={cn({ [styles.fixedWidth]: fixedWidth })}>{children}</div>
+    </div>
     <Footer />
   </ThemeProvider>
 )

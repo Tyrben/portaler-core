@@ -1,16 +1,16 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
+import Login from '../components/Login'
 import SEO from '../components/seo'
-import SignupForm from '../components/SignupForm'
 
 import styles from './styles.module.scss'
 
-const SignUpPage = () => (
+const LoginPage = () => (
   <Layout fixedWidth>
-    <SEO description="Signup for Portaler" />
-    <SignupForm />
+    <SEO description="Login to your dashboard" />
+    <Login />
   </Layout>
 )
 
-export default SignUpPage
+export default LoginPage

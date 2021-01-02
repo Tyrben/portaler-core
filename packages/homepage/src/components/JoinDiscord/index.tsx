@@ -1,20 +1,8 @@
 import React from 'react'
 
-import Button from '@material-ui/core/Button'
-import withStyles from '@material-ui/core/styles/withStyles'
-
-import discord from '../../images/discord-white.svg'
+import DiscordButton from '../DiscordButton'
 
 import styles from './styles.module.scss'
-
-const DiscordButton = withStyles(() => ({
-  root: {
-    backgroundColor: '#7289DA',
-    '&:hover': {
-      backgroundColor: '#869ADF',
-    },
-  },
-}))(Button)
 
 const JoinDiscord = () => (
   <div className={styles.container}>
@@ -24,9 +12,7 @@ const JoinDiscord = () => (
       href="https://discord.gg/W2NteY4dDS"
       size="small"
       title="join our discord"
-    >
-      <img className={styles.logo} src={discord} alt="discord" />{' '}
-    </DiscordButton>
+    />
   </div>
 )
 
